@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html>
+      <head>
+      <title>고양이가 궁금하다면?</title>
+	  <link rel="stylesheet" type="text/css" href="extern.css"/>
+      <meta charset=""UTF-8">
+      <meta author="김은우">
+	  <style type="text/css">
+p {
+    font-family: "바탕";
+    font-size: 20px;
+}
+
+#one { color: red; font-family:"바탕" }
+#two { color: yellow; font-family:"바탕" }
+#three { color: blue; font-family:"바탕" }
+
+#next { background-color: white; }
+
+</style>
+      </head>
+      <body bgcolor=lightgray style="margin: 20px 20px 20px 20px;">
+	   <div style="background: gray;padding: 10px 10px 10px 10px;">
+	   <center>
+      <h1 id="intro">고양이란 어떤 동물인가</h1>
+	   <a href="https://terms.naver.com/entry.nhn?docId=1062053&cid=40942&categoryId=32624" title ="고양이 지식백과">고양이 지식백과</a>
+	  </center>
+	  </div>
+	  
+	  <hr />
+	  <div>
+	  <center>
+      <img src="고양이.jpg" width=60%>
+     <canvas id="myCanvas" width="200px" height="200px"></canvas>
+	 <script type="text/javascript">
+
+var canvas = document.getElementById("myCanvas");
+var context = canvas.getContext("2d");
+
+context.fillStyle = 'black';
+context.beginPath();
+context.moveTo(75, 40);
+context.bezierCurveTo(75, 37, 70, 25, 50, 25);
+context.bezierCurveTo(20, 25, 20, 62.5, 20, 62.5);
+context.bezierCurveTo(20, 80, 40, 102, 75, 120);
+context.bezierCurveTo(110, 102, 130, 80, 130, 62.5);
+context.bezierCurveTo(130, 62.5, 130, 25, 100, 25);
+context.bezierCurveTo(85, 25, 75, 37, 75, 40);
+context.fill();
+
+</script>
+      <p><strong>특징:</strong> 머리가 둥글고 얼굴은 짧고 넓으며, <mark>눈이 둥글고 커서 양안시의 
+            능력이 뛰어나다.</mark> 
+      <br><strong>성격:</strong> <em>고양이는 매우 조심스러운 성격</em>이라 처음 보는 상대에게 허투루 마음을 열지 않는다. 
+            <sup>상대방의 호의에 대해 확신하기 전까지는 거리를 두는 것</sup>이다. 
+      <p>공식적으로 인정되는 <em>길들여진 고양이의 품종은 약 40종이며,</em> 
+            <mark>&quot;털의 길이&quot;에 따라 세 종류로 분류된다.</mark></p> 
+
+		</div>
+		</center>
+		
+			<p>&quot;털의 길이&quot;에 따라 분류되는 고양이</p>
+        <ol>
+             <li class="cat">짧은 털(샴고양이 등)</li>
+             <li class="cat">중간(맹크스고양이 등)</li>
+             <li class="cat">긴 털(페르시안고양이 등)</li>
+      </ol>
+	  
+	  <center>
+	  <table border="1", id="next">
+      <tr>
+<td colspan="3">털의 길이에 따라 분류되는 고양이</td>
+      </tr>
+      <tr>
+           <td id="one">짧은 털</td><td id="two">중간 털</td><td id="three">긴 털</td>
+      </tr>
+      <tr>
+           <td id="one">
+           <figure>
+               <img src="샴고양이.jpg" alt="샴 고양이 사진" width="100"><br>
+               <figcaption> 샴 고양이 등 </figcaption>
+           </figure>
+           </td>
+           <td id="two">
+           <figure>
+               <img src="맹크스고양이.jpg" alt="맹크스 고양이 사진" width="100"><br>
+               <figcaption> 맹크스 고양이 등 </figcaption>
+           </figure>
+           </td>
+           <td id="three">
+           <figure>
+               <img src="페르시안고양이.jpg" alt="페르시안 고양이 사진" width="100"><br>
+               <figcaption> 페르시안 고양이 등 </figcaption>
+           </figure>
+           </td>
+      </tr>
+      </table>
+	  </center>
+	  <hr>
+<h3>반려동물 가구수 조사를 위한 설문조사</h3>
+<form method="get" action="form_app.js">
+성명: <input type="text" name="person"/> <br>
+성별: <input type="radio" name="sex" value="male"/>여성
+<input type="radio" name="sex" value="female"/>남성<br>
+직업: <select name="job" size="1">
+<option>학생</option> <option>회사원</option> <option>군인</option> <option>기타</option>
+</select><br>
+반려동물 수: <input type="text" name="pet"/> <br>
+<hr>
+<input type="submit" value="전송"/>
+<input type="reset" value="취소"/> <br>
+</form>
+	  <hr>
+      
+	  <p><strong>과제 목록</strong></p>
+	
+<hr />
+      <ol>
+             <li><a href="http://kjk.skhu.ac.kr/~agasiya3/cat1.html">과제1</a></li>
+             <li><a href="http://kjk.skhu.ac.kr/~agasiya3/cat2.html">과제2</a></li>
+             <li><a href="http://kjk.skhu.ac.kr/~agasiya3/cat3.html">과제3</a></li>
+             <li><a href="http://kjk.skhu.ac.kr/~agasiya3/cat4.html">과제4</a></li>
+             <li><a href="http://kjk.skhu.ac.kr/~agasiya3/cat5.html">과제5</a></li>
+             <li><a href="http://kjk.skhu.ac.kr/~agasiya3/cat6.html">과제6</a></li>
+
+      </ol>
+	  
+<hr />
+<div>
+    <font color=BLACK size=3px>
+      <center>
+        <p>© 2018 Kim Eun Woo.</p>
+      </center>
+    </font>
+  </div>
+      </body>
+</html>

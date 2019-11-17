@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+function add() {
+var a = document.getElementById("op1").value;
+var b = document.getElementById("op2").value;
+document.getElementById("result1").value= parseInt(a)+parseInt(b);
+}
+
+function subtract() {
+var a = document.getElementById("op3").value;
+var b = document.getElementById("op4").value;
+document.getElementById("result2").value= parseInt(a)-parseInt(b);
+}
+
+function multiply() {
+var a = document.getElementById("op5").value;
+var b = document.getElementById("op6").value;
+document.getElementById("result3").value= parseInt(a)*parseInt(b);
+}
+
+
+ function divide() {
+var a = document.getElementById("op7").value;
+var b = document.getElementById("op8").value;
+
+if(b<1)
+{alert("입력 오류");
+}
+else
+document.getElementById("result4").value= parseInt(a)/parseInt(b);
+}
+
+
+
+</script>
+<form>
+<input id="op1" type="text" size="2"/>+
+<input id="op2" type="text" size="2"/>
+<input type="button" value="=" onclick="add();"/>
+<input id="result1" type="text" size="2"/> <br/>
+
+<input id="op3" type="text" size="2"/>-
+<input id="op4" type="text" size="2"/>
+<input type="button" value="=" onclick="subtract();"/>
+<input id="result2" type="text" size="2"/> <br/>
+
+<input id="op5" type="text" size="2"/>*
+<input id="op6" type="text" size="2"/>
+<input type="button" value="=" onclick="multiply();"/>
+<input id="result3" type="text" size="2"/> <br/>
+
+<input id="op7" type="text" size="2"/>/
+<input id="op8" type="text" size="2"/>
+<input type="button" value="=" onclick="divide();"/>
+<input id="result4" type="text" size="2"/><br/>
+</form>
+</body>
+</html>

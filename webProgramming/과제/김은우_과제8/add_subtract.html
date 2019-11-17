@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>실습</title>
+</head>
+<body>
+<script type="text/javascript">
+
+var a=0;
+var b=0;
+
+var a=prompt("수 입력");
+var b=prompt("더하거나 뺄 수 입력");
+
+function add(a,b) {
+ return(Number(a)+Number(b));
+}
+
+function subtract(a,b) {
+ return(a-b);
+}
+
+result1 = add(a,b);
+result2 = subtract(a,b);
+
+document.write("add result=" + Number(result1) + "</br>");
+document.write("subtract result=" + Number(result2) + "</br>");
+
+</script>
+</body>
+</html>
