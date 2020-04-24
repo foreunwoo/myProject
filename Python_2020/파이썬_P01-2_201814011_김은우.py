@@ -1,6 +1,6 @@
-score=int(input("점수를 입력하세요. ")) // 점수 입력
+score=int(input("점수를 입력하세요. ")) # 점수 입력
 
-if(score>=95): // 조건문에 맞는 학점을 출력
+if(score>=95): # 조건문에 맞는 학점을 출력
     print("A+")
 else:
     if(score>=90):
