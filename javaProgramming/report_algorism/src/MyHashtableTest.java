@@ -1,5 +1,12 @@
 import java.util.Scanner;
 
+//***************************
+//파일명: MyHashtableTest
+//작성자: 201814011 김은우
+//작성일: 2020-05-10
+//내용: [hw7_1] 학번 hash table
+//***************************
+
 class MyHashtable {
 	private int [] table; // 해시테이블
 	private int m; // 해시테이블 크기
@@ -39,10 +46,13 @@ class MyHashtable {
 		int index=hash(key);
 		int i=index, j=1;
 		
-		while(table[i] != EMPTY || table[i] != DELETED) { // 테이블 i번째가 empty 또는 deleted가 아니면
+		while(table[i] != EMPTY || table[i] != DELETED) { // 테이블 i번째가 empty 또는 deleted가 아닐 때까지
 			if(table[i] == key) 
-				return i;
-			i = (index + j++) % m; // i = 다음 위치
+				return i; // 검색 성공
+			i = (index + j++) % m; 
+			if(table[i] == EMPTY) { // 테이블 i번째가 비었을 때
+				return EMPTY;
+			}
 		}
 		
 		return EMPTY; // 검색 실패
@@ -61,12 +71,16 @@ class MyHashtable {
 		while(table[i] != EMPTY || table[i] != DELETED) { 
 			if(table[i] == key) {
 				table[i] = DELETED;
-				return true;
+				return true;		
 			}
-				
-			i = (index + j++) % m; // i = 다음 위치
+			i = (index + j++) % m; 
+			
+			if(table[i] == EMPTY) { 
+				return false;
+			}
+
 		}
-		return false;
+		return false; // 삭제 실패
 	}
 	
 	public void print() {
@@ -91,7 +105,7 @@ class MyHashtable {
 public class MyHashtableTest {
 
 	public static void main(String[] args) {
-		
+		System.out.println("hw7_1: 김은우");
 		
 		// 해시테이블 크기(size)를 입력 받음
 		Scanner scanner = new Scanner(System.in);
