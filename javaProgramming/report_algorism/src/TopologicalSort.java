@@ -9,7 +9,8 @@ import java.util.Scanner;
 
 class DirectedGraph {
 	private Node[] list;	// 인접 리스트
-	private int numberOfVertices;	// 정점 수 
+	private int numberOfVertices;	// 정점 수
+	String [] visited; // 방문 여부 체크
 	
 	// 리스트의 노드 구조를 정의한 클래스
 	private class Node {
@@ -51,13 +52,37 @@ class DirectedGraph {
 			}
 			System.out.println();
 		}
+	} 
+	
+	public void topologicalSort(int n) {		
+		for(int i=0; i<n; i++) {
+			visited[i] = "NO";
+		}
+		
+		for(int i=0; i<n; i++) {
+			if(visited[i] == "NO") {
+				depthFirstSearch(i);
+			}
+		}
+	}
+	
+	public void depthFirstSearch(int v) {
+		visited[v]= "YES";
+		Node n3 = new Node();
+		
+		for(int i=0; i<numberOfVertices; i++) {
+			n3 = list[i];
+			for(int j=0; j<n3.vertex; j++) {
+				if(visited[j] == "NO") {
+					depthFirstSearch(j);
+				}
+			}
+			System.out.print(n3.vertex+" ");
+		}
 	}
 }
 public class TopologicalSort {
-	public void topologicalSort() {
-		
-	}
-
+	
 	public static void main(String[] args) {
 		System.out.println("hw10_2: 김은우");
 		System.out.println();
@@ -87,6 +112,7 @@ public class TopologicalSort {
 		
 		// 5) 그래프 구현을 확인
 		graph.printAdjacencyList();
+		graph.topologicalSort(n);
 		scan.close();
 
 	}
